@@ -44,6 +44,29 @@ export function main() {
   main.append(h1, h2, container, buttonMore);
 }
 
+export function card(data) {
+  let container = document.querySelector(".container");
+
+  let card = document.createElement("div");
+  card.classList.add("card");
+
+  let cardTitle = document.createElement("h3");
+  cardTitle.innerHTML = `${data.title}`;
+
+  let cardData = document.createElement("p");
+  cardData.innerHTML = `Posted by ${data.by}`;
+
+  let buttonLink = document.createElement("a");
+  buttonLink.href = `${data.url}`;
+  buttonLink.target = "_blank";
+  let buttonNews = document.createElement("button");
+  buttonNews.innerHTML = "Read the News";
+  buttonLink.append(buttonNews);
+
+  container.append(card);
+  card.append(cardTitle, cardData, buttonLink);
+}
+
 export function footer() {
   let footer = document.createElement("footer");
 
