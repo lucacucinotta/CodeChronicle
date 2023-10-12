@@ -54,7 +54,7 @@ export function card(data) {
   cardTitle.innerHTML = `${data.title}`;
 
   let cardData = document.createElement("p");
-  cardData.innerHTML = `Posted by ${data.by}`;
+  cardData.innerHTML = `Posted by ${data.by} | ${getFullDate(data.time)}`;
 
   let buttonLink = document.createElement("a");
   buttonLink.href = `${data.url}`;
@@ -96,4 +96,13 @@ export function footer() {
   createIcon(websiteLink, websiteIcon);
   createIcon(githubLink, githubIcon);
   createIcon(linkedinLink, linkedinIcon);
+}
+
+function getFullDate(fetchTime) {
+  let creationDate = new Date(fetchTime * 1000);
+  let date = creationDate.getDate();
+  let month = creationDate.getMonth() + 1;
+  let year = creationDate.getFullYear();
+  let fullDate = [date, month, year].join("-");
+  return fullDate;
 }
