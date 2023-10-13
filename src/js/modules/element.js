@@ -11,7 +11,7 @@ let linkedinLink = "https://www.linkedin.com/in/luca-cucinotta-4b836b278";
 
 export function header() {
   let header = document.createElement("header");
-  header.setAttribute("id","top");
+  header.setAttribute("id", "top");
 
   let span = document.createElement("span");
   span.classList.add("ms-3");
@@ -56,11 +56,11 @@ export function main() {
     boxDirection.append(a);
     a.append(img);
   }
-  createArrowIcon("#top",topArrow);
-  createArrowIcon("#bottom",bottomArrow);
+  createArrowIcon("#top", topArrow);
+  createArrowIcon("#bottom", bottomArrow);
 
   document.body.append(main);
-  main.append(h1, h2, container,boxDirection, buttonMore);
+  main.append(h1, h2, container, boxDirection, buttonMore);
 }
 
 export function card(data) {
@@ -88,7 +88,7 @@ export function card(data) {
 
 export function footer() {
   let footer = document.createElement("footer");
-  footer.setAttribute("id","bottom");
+  footer.setAttribute("id", "bottom");
 
   let myTrademark = document.createElement("span");
   myTrademark.innerHTML = "© 2023 Luca Cucinotta";
