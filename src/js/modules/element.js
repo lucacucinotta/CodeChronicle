@@ -2,6 +2,8 @@ import logo from "/src/img/logo.svg";
 import websiteIcon from "/src/img/website.svg";
 import githubIcon from "/src/img/github.svg";
 import linkedinIcon from "/src/img/linkedin.svg";
+import topArrow from "/src/img/top.svg";
+import bottomArrow from "/src/img/bottom.svg";
 
 let websiteLink = "https://lucacucinotta.github.io";
 let githubLink = "https://github.com/lucacucinotta";
@@ -9,9 +11,10 @@ let linkedinLink = "https://www.linkedin.com/in/luca-cucinotta-4b836b278";
 
 export function header() {
   let header = document.createElement("header");
+  header.setAttribute("id","top");
 
   let span = document.createElement("span");
-  span.classList.add("me-3");
+  span.classList.add("ms-3");
   span.innerHTML = "CodeChronicle";
 
   let img = document.createElement("img");
@@ -40,8 +43,24 @@ export function main() {
   buttonMore.classList.add("mt-3", "mb-3");
   buttonMore.innerHTML = "Load More";
 
+  let boxDirection = document.createElement("div");
+  boxDirection.classList.add("boxDirection");
+  function createArrowIcon(linkOut, svgIconLink) {
+    let a = document.createElement("a");
+    a.href = linkOut;
+
+    let img = document.createElement("img");
+    img.src = svgIconLink;
+    img.classList.add("arrowDirection");
+
+    boxDirection.append(a);
+    a.append(img);
+  }
+  createArrowIcon("#top",topArrow);
+  createArrowIcon("#bottom",bottomArrow);
+
   document.body.append(main);
-  main.append(h1, h2, container, buttonMore);
+  main.append(h1, h2, container,boxDirection, buttonMore);
 }
 
 export function card(data) {
@@ -69,6 +88,7 @@ export function card(data) {
 
 export function footer() {
   let footer = document.createElement("footer");
+  footer.setAttribute("id","bottom");
 
   let myTrademark = document.createElement("span");
   myTrademark.innerHTML = "© 2023 Luca Cucinotta";
@@ -80,7 +100,7 @@ export function footer() {
   document.body.append(footer);
   footer.append(myTrademark, personalLink);
 
-  function createIcon(linkOut, svgIconLink) {
+  function createLinkIcon(linkOut, svgIconLink) {
     let a = document.createElement("a");
     a.href = linkOut;
     a.target = "_blank";
@@ -93,9 +113,9 @@ export function footer() {
     a.append(img);
   }
 
-  createIcon(websiteLink, websiteIcon);
-  createIcon(githubLink, githubIcon);
-  createIcon(linkedinLink, linkedinIcon);
+  createLinkIcon(websiteLink, websiteIcon);
+  createLinkIcon(githubLink, githubIcon);
+  createLinkIcon(linkedinLink, linkedinIcon);
 }
 
 function getFullDate(fetchTime) {

@@ -1,15 +1,122 @@
-@media screen and (max-width:1400px) {
-  body main .container .card{
-    width: 500px;
-  }
+//SMARTPHONE MEDIA QUERY
+@media only screen and (max-width:575.98px) {
+    body {
+        header {
+            span {
+                font-size: 1rem;
+            }
+            .logo {
+                max-width: 1.5rem;
+            }
+        }
+        main {
+            .container {
+                .card {
+                    width: 25rem;
+                    h3 {
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+                button{
+                    font-size: 0.8rem;
+                }
+            }
+            .boxDirection{
+                .arrowDirection{
+                    max-width: 1.5rem;
+                }
+            }
+        }
+        footer {
+            span {
+                font-size: 0.7rem;
+            }
+            .iconLink {
+                max-width: 0.7rem;
+            }
+        }
+    }
 }
-@media screen and (max-width:1200px) {
-  body main .container .card{
-    width: 400px;
-  }
+
+//TABLET MEDIA QUERY 
+@media only screen and (min-width:576px) and (max-width:991.98px) {
+    body {
+        header {
+            span {
+                font-size: 1.3rem;
+            }
+            .logo {
+                max-width: 1.8rem;
+            }
+        }
+        main {
+            .container {
+                .card {
+                    width: 30rem;
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+                button{
+                    font-size: 1rem;
+                }
+            }
+            .boxDirection{
+                .arrowDirection{
+                    width: 2.5rem;
+                }
+            }
+        }
+        footer {
+            span {
+                font-size: 1rem;
+            }
+            .iconLink {
+                max-width: 1rem;
+            }
+        }
+    }
 }
-@media screen and (max-width:1000px) {
-  body main .container .card{
-    width: 600px;
-  }
+
+//DESKTOP MEDIA QUERY
+@media only screen and (min-width:992px) {
+    body {
+        header {
+            span {
+                font-size: 1.5rem;
+            }
+            .logo {
+                max-width: 2rem;
+            }
+        }
+        main {
+            .container {
+                .card {
+                    width: 35rem;
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .boxDirection{
+                .arrowDirection{
+                    width: 3.5rem;
+                }
+            }
+        }
+        footer {
+            .iconLink {
+                max-width: 1.3rem;
+            }
+        }
+    }
 }
