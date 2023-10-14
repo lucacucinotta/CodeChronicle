@@ -4,6 +4,7 @@ import githubIcon from "/src/img/github.svg";
 import linkedinIcon from "/src/img/linkedin.svg";
 import topArrow from "/src/img/top.svg";
 import bottomArrow from "/src/img/bottom.svg";
+import { getFullDate } from "./function.js";
 
 let websiteLink = "https://lucacucinotta.github.io";
 let githubLink = "https://github.com/lucacucinotta";
@@ -35,6 +36,9 @@ export function main() {
   let h2 = document.createElement("h2");
   h2.innerHTML = "Fresh News from Hacker News API";
 
+  let spinnerLoading = document.createElement("div");
+  spinnerLoading.classList.add("spinner");
+
   let container = document.createElement("div");
   container.classList.add("container", "mt-4");
 
@@ -60,7 +64,7 @@ export function main() {
   createArrowIcon("#bottom", bottomArrow);
 
   document.body.append(main);
-  main.append(h1, h2, container, boxDirection, buttonMore);
+  main.append(h1, h2, spinnerLoading, container, boxDirection, buttonMore);
 }
 
 export function card(data) {
@@ -88,6 +92,7 @@ export function card(data) {
 
 export function footer() {
   let footer = document.createElement("footer");
+  footer.classList.add("fixed-bottom");
   footer.setAttribute("id", "bottom");
 
   let myTrademark = document.createElement("span");
@@ -116,13 +121,4 @@ export function footer() {
   createLinkIcon(websiteLink, websiteIcon);
   createLinkIcon(githubLink, githubIcon);
   createLinkIcon(linkedinLink, linkedinIcon);
-}
-
-function getFullDate(fetchTime) {
-  let creationDate = new Date(fetchTime * 1000);
-  let date = creationDate.getDate();
-  let month = creationDate.getMonth() + 1;
-  let year = creationDate.getFullYear();
-  let fullDate = [date, month, year].join("-");
-  return fullDate;
 }

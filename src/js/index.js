@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "../scss/style.scss";
 import { header, main, footer, card } from "./modules/element.js";
+import { spinnerLoading } from "./modules/function.js";
 
 header();
 main();
@@ -40,6 +41,7 @@ async function fetchItems(id) {
 }
 
 fetchNews();
+spinnerLoading();
 
 loadMore.addEventListener("click", () => {
   count += 10;

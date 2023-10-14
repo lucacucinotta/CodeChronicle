@@ -25,15 +25,28 @@ body {
         h2 {
             text-align: center;
         }
+        .spinner {
+            border: 6px solid;
+            border-color: $secondary-color transparent $secondary-color transparent;
+            border-radius: 50%;
+            animation: spin 1.5s ease infinite;
+            position: relative;
+            top: 20px;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
         .container {
-            display: flex;
+            display: none;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
             .card {
                 background-color: $secondary-color;
-                border: 1px solid #00264D;
-                color: #00264D;
+                border: 1px solid $primary-color;
+                color: $primary-color;
                 border-radius: 10px;
                 height: 200px;
                 display: flex;
@@ -55,12 +68,18 @@ body {
             border-radius: 20px;
             font-size: 1rem;
             width: 9rem;
+            box-shadow: 0 2px 0 $primary-color;
+            display: none;
+        }
+        button:active{
+            box-shadow: none;
+            transform: translateY(2px);
         }
         .boxDirection{
             position:fixed; 
             bottom:40px;
             right: 0;
-            display: flex;
+            display: none;
             flex-direction: column;
         }
     }
