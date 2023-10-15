@@ -83,6 +83,7 @@ export function card(data) {
   buttonLink.href = `${data.url}`;
   buttonLink.target = "_blank";
   let buttonNews = document.createElement("button");
+  buttonNews.setAttribute("id", "buttonNews");
   buttonNews.innerHTML = "Read the News";
   buttonLink.append(buttonNews);
 

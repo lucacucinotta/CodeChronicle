@@ -60,9 +60,17 @@ body {
                 p {
                     text-align: center;
                 }
+                #buttonNews {
+                    background-color: $tertiary-color;
+                    color: $secondary-color;
+                    border-radius: 20px;
+                    font-size: 1rem;
+                    width: 9rem;
+                    box-shadow: 0 2px 0 $primary-color;
+                }
             }
         }
-        button {
+        #buttonMore {
             background-color: $tertiary-color;
             color: $secondary-color;
             border-radius: 20px;

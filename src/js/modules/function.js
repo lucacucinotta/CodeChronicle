@@ -18,7 +18,7 @@ export function spinnerLoading() {
     spinner.style.display = "none";
     container.style.display = "flex";
     button.style.display = "block";
-    boxDirection.display = "flex";
+    boxDirection.style.display = "flex";
     footer.classList.remove("fixed-bottom");
   }, 2500);
 }
