@@ -2,7 +2,7 @@
 <h1 align="center">CodeChronicle</h1>
 <p align="center">Fresh News from Hacker News
 <br>
-Click here to <a href=""><strong>Live Demo</strong></a>
+Click here to <a href="https://codechroniclenews.netlify.app"><strong>Live Demo</strong></a>
 </p>
 
 ## Table of contents
@@ -15,7 +15,7 @@ Click here to <a href=""><strong>Live Demo</strong></a>
 - [Responsiveness](#responsiveness)
 - [Author](#author)
 
-### Introduction to Project
+## Introduction to Project
 
 **CodeChronicle** born with the aim of creating an application for the dissemination of information in the technological field with the help of **Hacker News**, a website that acts as a news aggregator and discussion forum for technology enthusiasts.
 
@@ -25,7 +25,7 @@ Click here to <a href=""><strong>Live Demo</strong></a>
 
 At the startup, the website will contact the API from Hacker News service to show title,date and link of the latest available news. Given the large amount of data, in order to avoid performance problems, after having retrieved the list of the latest news, the application will only show the detail of the first 10 news. A button (**Load More**) must be implemented to allow the user to view information about the 10 next news.
 
-### Technologies
+## Technologies
 
 <p align="left">
   <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
@@ -44,20 +44,20 @@ At the startup, the website will contact the API from Hacker News service to sho
   <img src="https://img.shields.io/badge/Lodash-3492FF?style=for-the-badge&logo=lodash&logoColor=white"/>
 </p>
 
-### Usage
+## Usage
 
 At the startup you can see the firts 10 news from Hacker News, with title, who was post the news and when and with link to view the full news. If you want to see the next 10 news just click on **"Load More"** button. You can use the directional arrows to move around the page.
 
 <div align="center"><img src="src/img/READme/video.gif"></div>
 
-### Responsiveness
+## Responsiveness
 
 Thanks to the Bootstrap Container Layout and the use of Media Queries, I've manage to take care of the Responsiveness aspect of the website, which adapts perfectly to the change in the size of the device on which it is displayed.
 
 ![desktop image](src/img/READme/desktop.png)
 <div align="center"><img src="src/img/READme/mobile.png"></div>
 
-### Author
+## Author
 
 Luca Cucinotta
 <p align="left">
