@@ -61,9 +61,6 @@ Thanks to the Bootstrap Container Layout and the use of Media Queries, I've mana
 
 Luca Cucinotta
 <p align="left">
-  <a href="https://lucacucinotta.github.io">
-    <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white"/>
-  </a>
   <a href="https://github.com/lucacucinotta">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
   </a>
